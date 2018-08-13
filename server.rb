@@ -1,7 +1,6 @@
 require 'sinatra'
-require 'sendgrid-ruby'
-include SendGrid
-
+require 'curb'
+require 'json'
 
 class Cookie
   attr_accessor :name, :price, :description
@@ -35,16 +34,6 @@ end
 
 
 
-post '/' do
-  from = Email.new(email: 'kaylerc@gmail.com')
-  to = Email.new(email: params[:email])
-  subject = 'Welcome to '
-  content = Content.new(type: 'text/plain', value: 'and easy to do anywhere, even with Ruby')
-  mail = Mail.new(from, subject, to, content)
-
-  sg = SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
-  response = sg.client.mail._('send').post(request_body: mail.to_json)
-end
 
 
 
