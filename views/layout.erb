@@ -14,6 +14,10 @@
 <%= yield %>
 <p></p>
 
+<form action='/user' method='GET'>
+    <input type='email' name='email'>
+    <input type='submit' value='find user'>
+</form>
 
 <script src="main.js"></script>
 </body>
