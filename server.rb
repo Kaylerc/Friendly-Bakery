@@ -1,14 +1,30 @@
 # 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
 require 'sinatra'
-require 'curb'
+
+
+class Cookie
+  attr_accessor :name, :price, :description
+  def initialize(name, price, description)
+    @name = name
+    @price = price
+    @description = description
+  end
+end
+
+oatmeal = Cookie.new('Oatmeal', '$2.50', 'yummy oatmeal cooke!')
+
+
+
+
+
 
 
 get '/' do
   erb :home
 end
 
-
 get '/cookies' do
+  @oatmeal = oatmeal
   erb :cookies
 end
 
@@ -21,11 +37,8 @@ get '/muffins' do
 end
 
 
-class Cookie
-  attr_accessor :name, :price, :description
-end
 
-ck1 = Cookie.new('Oatmeal', '$2.50', 'yummy oatmeal cooke!')
+
 
 
 class Muffin
