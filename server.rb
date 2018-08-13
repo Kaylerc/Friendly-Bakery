@@ -32,7 +32,13 @@ get '/muffins' do
   erb :muffins
 end
 
-
+get '/events' do
+  results = Curl::Easy.perform("https://www.eventbriteapi.com/v3/events/search/?token=#{ ENV['API_TOKEN'] }")
+  @data = results.body_str
+  @events = JSON.parse(@data)
+  @events_data = @events['events']
+  erb :events
+end
 
 
 

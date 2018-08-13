@@ -1,0 +1,7 @@
+<h2>events</h2>
+
+<% @events_data.each do |event| %>
+<p><%= event['name']['text'] %></p><br>
+<img src="<%= event['logo']['url'] %>">
+<p> <%= event['description']['text'] %></p>
+<% end %>
