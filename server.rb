@@ -16,10 +16,6 @@ oatmeal = Cookie.new('Oatmeal', '$2.50', 'yummy oatmeal cooke!')
 
 
 
-
-
-
-
 get '/' do
   erb :home
 end
@@ -40,7 +36,7 @@ end
 
 
 post '/' do
-  from = Email.new(email: 'test@example.com')
+  from = Email.new(email: 'kaylerc@gmail.com')
   to = Email.new(email: params[:email])
   subject = 'Welcome to '
   content = Content.new(type: 'text/plain', value: 'and easy to do anywhere, even with Ruby')
