@@ -1,4 +1,3 @@
-# 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
 require 'sinatra'
 require 'sendgrid-ruby'
 include SendGrid
@@ -43,7 +42,7 @@ end
 post '/' do
   from = Email.new(email: 'test@example.com')
   to = Email.new(email: params[:email])
-  subject = 'Sending with SendGrid is Fun'
+  subject = 'Welcome to '
   content = Content.new(type: 'text/plain', value: 'and easy to do anywhere, even with Ruby')
   mail = Mail.new(from, subject, to, content)
 
