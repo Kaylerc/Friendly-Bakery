@@ -70,6 +70,9 @@ get '/cakes' do
 end
 
 get '/muffins' do
+  @blue = blue
+  @orcran = orcran
+  @banana = banana
   erb :muffins
 end
 
