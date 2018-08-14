@@ -2,19 +2,6 @@ require 'sinatra'
 require 'curb'
 require 'json'
 
-class Cookie
-  attr_accessor :name, :price, :description
-  def initialize(name, price, description)
-    @name = name
-    @price = price
-    @description = description
-  end
-end
-
-oatmeal = Cookie.new('Oatmeal Cookie', '$2.50', 'Our signature classic!  Organic oatmeal, juicy raisins and a hint of cinnamon')
-chocolate = Cookie.new('Chocolate Chip Cookie', '$2.50', 'Our top seller!! Soft baked with semi-sweet chololate morsels')
-snick = Cookie.new('Snickerdoodle Cookie', '$2.50', 'Sugar cookie topped with cinnamon')
-
 
 
 
@@ -27,9 +14,9 @@ class Muffin
   end
 end
 
-blue = Muffin.new('Blueberry', '$5.50', '')
-orcran = Muffin.new('Orange-Cranberry', '$5.50' '')
-banana = Muffin.new('Banana-Walnut', '$5.50', '')
+blue = Muffin.new('Blueberry', '$5.50', 'Our classic blueberry muffin lightly sprinkled with sugar')
+orcran = Muffin.new('Orange-Cranberry', '$5.50', 'Fresh orange zest and locally grown cranberries')
+banana = Muffin.new('Banana-Walnut', '$5.50', 'Ripe bananas with chunks of walnuts')
 
 
 
@@ -46,7 +33,22 @@ end
 strawberry = Cake.new('Strawberry-Swirl Cheesecake', '$15.00', 'Rich velvetycheesecake with organic strawberry puree swirl, on a graham cracker crust ')
 confetti = Cake.new('Confetti Celebration', '$30', 'One of our best-selllers!  This vanilla based cake with confetti sprinkles is sure to get the party started!')
 chocolate = Cake.new('Double Chocolate', '$35', 'Chocolate lovers, this one is for you!  MOist chocolate layers separated by rich chocolate frosting' )
-)
+
+
+
+class Cookie
+  attr_accessor :name, :price, :description
+  def initialize(name, price, description)
+    @name = name
+    @price = price
+    @description = description
+  end
+end
+
+
+oatmeal = Cookie.new('Oatmeal Cookie', '$2.50', 'Our signature classic!  Organic oatmeal, juicy raisins and a hint of cinnamon')
+chocolate = Cookie.new('Chocolate Chip Cookie', '$2.50', 'Our top seller!! Soft baked with semi-sweet chololate morsels')
+snick = Cookie.new('Snickerdoodle Cookie', '$2.50', 'Sugar cookie topped with cinnamon')
 
 
 get '/home' do
@@ -55,6 +57,8 @@ end
 
 get '/cookies' do
   @oatmeal = oatmeal
+  @chocolate = chocolate
+  @snick = snick
   erb :cookies
 end
 
