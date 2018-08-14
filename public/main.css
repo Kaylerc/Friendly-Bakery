@@ -1,5 +1,8 @@
+
+
+
 html {
-  /* background-color: rgb(140, 39, 72); */
+  background-color: rgb(140, 39, 72);
   font-family: 'Handlee', cursive;
 }
 .nav{
@@ -34,14 +37,25 @@ html {
 
 .main_grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  background-color: rgb(201, 109, 139);
+  /* padding: 25px; */
+  grid-template: auto/auto auto auto;
+  /* background-color: rgb(201, 109, 139); */
+  /* grid-gap: 40px; */
+
 }
 
 .cells {
   overflow: scroll;
+  padding: 1em;
+  border: black 1px solid;
+  height: 75vh;
+  text-align: center;
+
 }
 
+.container {
+
+}
 
 .bname {
   text-align: center;
