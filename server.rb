@@ -31,8 +31,8 @@ end
 
 
 strawberry = Cake.new('Strawberry-Swirl Cheesecake', '$15.00', 'Rich velvetycheesecake with organic strawberry puree swirl, on a graham cracker crust ')
-confetti = Cake.new('Confetti Celebration', '$30', 'One of our best-selllers!  This vanilla based cake with confetti sprinkles is sure to get the party started!')
-chocolate = Cake.new('Double Chocolate', '$35', 'Chocolate lovers, this one is for you!  MOist chocolate layers separated by rich chocolate frosting' )
+custom = Cake.new('Custom Cakes', 'Varies', 'You dream it, we make it! Tell us what you need for your soecial day, and we work our magic to make happen!')
+chococake = Cake.new('Triple Chocolate', '$35', 'Chocolate lovers, this one is for you!  Moist chocolate layers separated by rich chocolate frosting' )
 
 
 
@@ -46,9 +46,9 @@ class Cookie
 end
 
 
-oatmeal = Cookie.new('Oatmeal Cookie', '$2.50', 'Our signature classic!  Oatmeal, juicy raisins and a hint of cinnamon')
+oatmeal = Cookie.new('Oatmeal Cookie', '$2.50', 'A classic!  Oatmeal, juicy raisins and a hint of cinnamon')
 chocolate = Cookie.new('Chocolate Chip Cookie', '$2.50', 'Our top seller!! Soft baked with semi-sweet chololate morsels')
-snick = Cookie.new('Snickerdoodle Cookie', '$2.50', 'Sugar cookie topped with cinnamon')
+lemon = Cookie.new('Lemon Cookie', '$2.50', 'Sweet combination of lemon zest and classic sugar cookie')
 
 
 get '/home' do
@@ -58,11 +58,14 @@ end
 get '/cookies' do
   @oatmeal = oatmeal
   @chocolate = chocolate
-  @snick = snick
+  @lemon = lemon
   erb :cookies
 end
 
 get '/cakes' do
+  @sberry = strawberry
+  @chococake = chococake
+  @custom = custom
   erb :cakes
 end
 
