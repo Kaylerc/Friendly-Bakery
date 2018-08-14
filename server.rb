@@ -46,7 +46,7 @@ class Cookie
 end
 
 
-oatmeal = Cookie.new('Oatmeal Cookie', '$2.50', 'Our signature classic!  Organic oatmeal, juicy raisins and a hint of cinnamon')
+oatmeal = Cookie.new('Oatmeal Cookie', '$2.50', 'Our signature classic!  Oatmeal, juicy raisins and a hint of cinnamon')
 chocolate = Cookie.new('Chocolate Chip Cookie', '$2.50', 'Our top seller!! Soft baked with semi-sweet chololate morsels')
 snick = Cookie.new('Snickerdoodle Cookie', '$2.50', 'Sugar cookie topped with cinnamon')
 
