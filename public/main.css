@@ -1,8 +1,12 @@
-
+html {
+  /* background-color: rgb(140, 39, 72); */
+  font-family: 'Handlee', cursive;
+}
 .nav{
     background-color: rgba(0,0,0,0);
     height: 40px;
     width:auto;
+    justify-content: right;
 }
 
 .nav ul li{
@@ -11,16 +15,68 @@
     display: inline-block;
     padding: 10px;
     padding-right:20px;
-    /* float: right; */
-    }
+
+}
+
 .nav ul li a {
     text-decoration: none;
-    /* color:#FFF; */
-    color:purple;
+    color: rgb(140, 39, 72);
     font-family:Calibri;
-    }
+}
+
 .nav ul li a:hover {
-    color: #6be0d6;}
+    color: #6be0d6;
+}
+
 .nav ul li a:active{
     color: #6be0d6;
-      }
+}
+
+.main_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: rgb(201, 109, 139);
+}
+
+.cells {
+  overflow: scroll;
+}
+
+
+.bname {
+  text-align: center;
+  background-color: rgb(140, 39, 72);
+  color:#FFFF;
+  font-size: 40px;
+  font-family: 'Handlee', cursive;
+  font-weight: bold;
+  padding: 20px;
+
+}
+/* style="background-color: rgb(201, 109, 139)" */
+
+/* .btn {
+  border: 2px solid;
+  border-left-color: rgb(140, 39, 72);
+  background-color: rgb(140, 39, 72);
+} */
+
+.btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.success {
+  border-color: rgb(140, 39, 72);
+  color: rgb(140, 39, 72);
+}
+
+.success:hover {
+  background-color: #4CAF50;
+  color: white;
+}

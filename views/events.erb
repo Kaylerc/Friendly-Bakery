@@ -1,7 +1,13 @@
-<h2>events</h2>
+<body>
+    <h2 class="bname">Upcoming Baking Events</h2>
 
-<% @events_data.first(9).each do |event| %>
-<p><%= event['name']['text'] %></p><br>
-<img src="<%= event['logo']['url'] %>">
-<p> <%= event['description']['text'] %></p>
-<% end %>
+<div class="main_grid">
+    <% @events_data.first(9).each do |event| %>
+    <div class="cells"
+    <p><%= event['name']['text'] %></p><br>
+    <img src="<%= event['logo']['url'] %>">
+    <p> <%= event['description']['text'] %></p>
+    </div>
+    <% end %>
+</div>
+</body>
