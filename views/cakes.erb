@@ -1,1 +1,52 @@
-<h1> we got cakes! </h1>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href='cake.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title></title>
+  </head>
+  <body>
+
+<section>
+  <div class="container-fluid">
+    <h1>Cakes</h1>
+  </div>
+</section>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="images/chococake2.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4> <%= @chococake.name %></h4> - <h6><%= @chococake.price %></h6>
+              <p class="card-text"><%= @chococake.description %></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="images/sberrycheese.jpeg" alt="Card image cap">
+            <div class="card-body">
+              <h4> <%= @sberry.name %></h4> - <h6><%= @sberry.price %></h6>
+              <p class="card-text"><%= @sberry.description %></p>            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="images/custom.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h4> <%= @custom.name %></h4> - <h6><%= @custom.price %></h6>
+              <p class="card-text"><%= @custom.description %></p>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>
