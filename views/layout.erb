@@ -3,10 +3,22 @@
 <head>
 
 <link type="text/css" rel="stylesheet" href='main.css' />
-
+<%= yield %>
 
 <title></title>
 </head>
+
+
+<div class='nav'>
+<ul>
+ <li><a href="home">Home</a></li>
+ <li><a href="cookies">Cookies</a></li>
+ <li><a href="cakes">Cakes</a></li>
+ <li><a href="muffins">Muffins</a></li>
+ <li><a href="events">Events</a></li>
+</ul>
+</div>
+
 
 <body>
 <h1>testing</h1>
@@ -14,10 +26,7 @@
 <%= yield %>
 <p></p>
 
-<form action='/' method='POST'>
-    <input type='email' name='email'>
-    <input type='submit' value='find user'>
-</form>
+
 
 <script src="main.js"></script>
 </body>

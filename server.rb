@@ -15,7 +15,7 @@ oatmeal = Cookie.new('Oatmeal', '$2.50', 'yummy oatmeal cooke!')
 
 
 
-get '/' do
+get '/home' do
   erb :home
 end
 
@@ -33,7 +33,7 @@ get '/muffins' do
 end
 
 get '/events' do
-  results = Curl::Easy.perform("https://www.eventbriteapi.com/v3/events/search/?token=#{ ENV['API_TOKEN'] }")
+  results = Curl::Easy.perform("https://www.eventbriteapi.com/v3/events/search//?q=baking&location.address=NYC&token=#{ ENV['API_TOKEN'] }")
   @data = results.body_str
   @events = JSON.parse(@data)
   @events_data = @events['events']
