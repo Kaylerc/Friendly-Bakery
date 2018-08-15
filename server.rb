@@ -30,9 +30,9 @@ class Cake
 end
 
 
-strawberry = Cake.new('Strawberry Cheesecake', '$25.00', 'Rich velvety cheesecake with chungs of organic strawberry, on a graham cracker crust ')
+strawberry = Cake.new('Strawberry Cheesecake', '$25.00', 'Rich velvety cheesecake topped with organic strawberries and juicy chunks blended throughout, on a graham cracker crust ')
 custom = Cake.new('Custom Cakes', 'Prices vary', 'You dream it, we make it! Tell us what you need for your soecial day, and we work our magic to make happen!')
-chococake = Cake.new('Triple Chocolate', '$35', 'Chocolate lovers, this one is for you!  Moist chocolate layers separated by rich chocolate frosting' )
+chococake = Cake.new('Triple Chocolate', '$35', 'Chocolate lovers, this one is for you!  Moist chocolate layers separated by rich chocolate frosting, topped with fresh berries' )
 
 
 

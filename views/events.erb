@@ -3,8 +3,8 @@
 <container>
   <div class="main_grid">
     <% @events_data.first(9).each do |event| %>
-    <div class="cells"
-    <p><%= event['name']['text'] %></p><br>
+    <div class="cells">
+    <p class="ename"><%= event['name']['text'] %></p><br>
     <img src="<%= event['logo']['url'] %>">
     <p> <%= event['description']['text'] %></p>
     </div>
