@@ -1,8 +1,13 @@
+:root {
+    --main: rgb(140, 39, 72);
+    --hover: #6be0d6;
+    --second: rgb(201, 109, 139);
 
+}
 
 
 html {
-  background-color: rgb(140, 39, 72);
+  background-color: var(--main);
   font-family: 'Handlee', cursive;
 }
 .nav{
@@ -23,16 +28,16 @@ html {
 
 .nav ul li a {
     text-decoration: none;
-    color: rgb(140, 39, 72);
-    font-family:Calibri;
+    color: var(--main);
+    font-family: 'Handlee', cursive;
 }
 
 .nav ul li a:hover {
-    color: #6be0d6;
+    color: var(--hover);
 }
 
 .nav ul li a:active{
-    color: #6be0d6;
+    color: var(--hover);
 }
 
 .main_grid {
@@ -63,7 +68,7 @@ html {
 
 .bname {
   text-align: center;
-  background-color: rgb(140, 39, 72);
+  background-color: var(--main);
   color:#FFFF;
   font-size: 40px;
   font-family: 'Handlee', cursive;
@@ -71,7 +76,6 @@ html {
   padding: 20px;
 
 }
-
 
 
 .muff {
@@ -91,31 +95,33 @@ html {
 
 
 .success {
-  border-color: rgb(140, 39, 72);
-  color: rgb(140, 39, 72);
+  border-color: var(--main);
+  color: var(--main);
 }
 
-.success:hover {
-  background-color: #4CAF50;
-  color: white;
-}
 
 i {
-  color: rgb(201, 109, 139);
+  color: var(--second);
 }
 
 i:hover {
-  color: #6be0d6;
+  color: var(--hover);
 }
 
 
 footer {
   text-align: center;
-  color: rgb(140, 39, 72);
+  color: var(--main);
+  font-family: 'Handlee', cursive;
+}
+
+#history {
+  font-size: 26px;
+  font-weight: bold;
 }
 
 .space {
-  margin: 50px;
+  margin: 20px;
 }
 
 #copy {
@@ -132,6 +138,6 @@ footer {
   font-weight: bold;
   font-family: 'Handlee', cursive;
   font-size: 23px;
-  color: rgb(140, 39, 72);
+  color: var(--main);
   text-shadow: 2px;
 }
