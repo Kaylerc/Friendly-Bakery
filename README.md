@@ -6,3 +6,6 @@ To create a fullstack bakery website to demonstrate my knowledge of :
 - Ruby
 - Sinatra
 - Class structure in Ruby
+
+
+**images used in this project were sourced from Google searches
