@@ -55,6 +55,10 @@ get '/home' do
   erb :home
 end
 
+get '/index' do
+  erb :home
+end
+
 get '/cookies' do
   @oatmeal = oatmeal
   @chocolate = chocolate
@@ -77,7 +81,7 @@ get '/muffins' do
 end
 
 get '/events' do
-  results = Curl::Easy.perform("https://www.eventbriteapi.com/v3/events/search//?q=baking&location.address=NYC&token=#{ ENV['API_TOKEN'] }")
+  results = Curl::Easy.perform("https://www.eventbriteapi.com/v3/events/search//?q=baking&location.address=NYC&token=FGEP6NNCU7VUSAEVJS4Z")
   @data = results.body_str
   @events = JSON.parse(@data)
   @events_data = @events['events']
